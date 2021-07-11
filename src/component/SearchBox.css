@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+input,button {
+    padding: 4vh;
+    margin:1vh;
+    border-radius: 2vh;
+    border: 0vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-size: 5vh;
+    text-align: center;
+    font-family: 'Creepster', cursive; 
+     
+    
+}
+
+button {
+    background-image: linear-gradient(to right, #DCE35B 0%, #45B649  51%, #DCE35B  100%);
+    color:azure;
+    font-size:x-large;
+    cursor: pointer;
+
+    margin-bottom: -1vh;
+}
+
+select{
+    padding: 1vh;
+    margin:2vh;
+    border-radius: 2vh;
+    border: 0vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-size: 3vh;
+    text-align: center;
+    font-family: 'Staatliches', cursive ; 
+    
+}
+
+
+.SearchBoxContainer{
+    background-image: url("./img/fondo.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.486);
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+
+    height:70%;
+    
+}
+
+
+
+.SearchBoxForm{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width: 60vh;
+    margin: 10vh;
+
+}
+
+#rickLuna{
+ 
+  width: 20vh;
+  height:20vh;
+  padding-left: 19vh;
+
+  margin-top: -8vh;
+
+  animation: reboteIn 1s 2s;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+  
+}
+
+#nameRick{
+
+    image-orientation: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 500px;
+    height: 200px;
+
+   
+
+    animation: reboteIn 1s 2s;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+}
+
+@keyframes reboteIn {
+ 
+    0% {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    
+    50% {
+       opacity: 1;
+       transform: scale(1.1);
+    }
+  
+
+    100%{
+        opacity: 0.9;
+      transform: scale(1);
+    }
+    
+  }
+  
+  
+  
+    
+  
+
+

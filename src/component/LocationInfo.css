@@ -1,0 +1,12 @@
+.LocationInfo{
+    display:flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   
+   font-family:'Creepster', cursive;  ;
+   color:aqua;
+   -webkit-text-stroke: 1px black;
+   font-size: 3vh;
+    text-shadow: 2px 2px 5px rgb(81, 255, 0);
+    background-image: linear-gradient(to right, #DCE35B 0%, #45B649  51%, #DCE35B  100%);
+}

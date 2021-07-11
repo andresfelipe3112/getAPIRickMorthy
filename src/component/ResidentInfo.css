@@ -1,0 +1,104 @@
+.ResidenContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color:rgb(0, 0, 0);
+    padding-top: 5vh;
+}
+
+.personaje{
+    display: flex;
+   background-color: rgb(34, 33, 33);
+   width:90vh;
+   height: 51vh;
+    margin: 2vh;
+    border-radius: 3vh;
+    
+}
+
+.person{
+    width:51vh;
+    height:51vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;  
+    
+    width:51vh;
+    height:51vh;
+}
+
+.h1{
+   margin-top:-3vh;
+   margin-bottom: -2vh;
+      
+   font-family:'Creepster', cursive;  ;
+   color:aqua;
+   -webkit-text-stroke: 1px black;
+   font-size: 4.5vh;
+   text-shadow: 0px 0px 5px rgb(81, 255, 0);
+}
+
+.h3{
+    font-family:'Creepster', cursive;  ;
+    color:aqua;
+    -webkit-text-stroke: 1px black;
+    font-size: 3.5vh;
+    text-shadow: 0px 0px 5px rgb(81, 255, 0); 
+
+    margin-bottom: 4vh;
+}
+
+.h4{
+    color:wheat;
+    margin-bottom: -0.5vh;
+}
+
+.buttonsContainer{
+    width: 100%;
+}
+
+.optionsNextPage{
+
+
+ background-image: radial-gradient( #DCE35B 0%, #45B649  10%, #DCE35B  100%) ;
+ font-family:'Creepster', cursive;  ;
+   color:aqua;
+   -webkit-text-stroke: 1px black;
+   font-size: 4.5vh;
+   text-align: center;
+   text-shadow: 0px 0px 5px rgb(81, 255, 0);
+   
+  margin-bottom: 1vh;
+  position: relative;
+  height: 9vh;
+  width: 9vh;
+
+  margin-top: -2vh;
+  text-align:center;
+  padding: 16px;
+
+  cursor: pointer;
+
+  margin:1vh
+
+
+}
+
+.optionsNextPage:hover{
+-webkit-transform:scale(1.25);
+-moz-transform:scale(1.25);
+-ms-transform:scale(1.25);
+-o-transform:scale(1.25);
+transform:scale(1.25);
+/* transition: 0.5s; */
+}
+
+
