@@ -5,23 +5,26 @@ import { useState, useEffect } from 'react';
 
 export default function LocationContainer({ inputDataApp }) {
 
+    //states
 
-    const [numberRandom] = useState(Math.round(Math.random() * (15 - 1) + 1))
-
+    const [numberRandom] = useState(Math.round(Math.random() * (15 - 1) + 1)) // numero random para que salga un aleatorio de locations
     const [dataLocation, setDataLocation] = useState("")
     const [input, setInput] = useState("")
 
 
 
-    useEffect(() => {
+    //use_effect
+
+
+    useEffect(() => {        // agregamos el input.value 
         if (inputDataApp !== "") {
             setInput(inputDataApp)
         }
     }, [inputDataApp])
 
 
-    useEffect(() => {
 
+    useEffect(() => {
         const getAPIFisrtRederDOM = async () => {
 
             try {
@@ -40,10 +43,10 @@ export default function LocationContainer({ inputDataApp }) {
                     residentsNumber: json["residents"].length,
                 }
 
-                setDataLocation(objLocation)
+                setDataLocation(objLocation) // agregamos el objeto para ser usado
 
             } catch (error) {
-                throw Error(error)
+                throw Error(error) //capturamos el error
             }
 
         }
@@ -54,7 +57,7 @@ export default function LocationContainer({ inputDataApp }) {
 
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, []) // solo necesito ejecutarlo una sola ves
 
 
     useEffect(() => {
@@ -82,8 +85,7 @@ export default function LocationContainer({ inputDataApp }) {
             }
         }
 
-
-        if (input !== "") {
+        if (input !== "") {         // si el imput es vacio ejecuto getAPIInputRederDOM()
             getAPIInputRederDOM()
         }
 

@@ -1,5 +1,7 @@
 import "./LocationInfo.css"
 
+
+
 export default function LocationInfo(prop) {
     return (
         <div className="LocationInfo">

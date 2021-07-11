@@ -6,17 +6,16 @@ import { useState, useEffect } from "react"
 export default function ResidentInfo({ info }) {
 
 
-
+    // useStates
 
     const [dataOnly10, setDataOnly10] = useState(info.slice(0, 10))
-
     const [contadorBotonestate, setConstadorBotonesestate] = useState(1)
     const [buttons, setButtons] = useState(0);
 
 
+    //functions
 
-
-    function botones() {
+    function botones() {  // Esta funcion determina cuantos botones necesito mostraR 1 x por cada 10 personajes
         let contadorBotones = 1
         let reinicio = 0;
         for (let index = 0; index < info.length; index++) {
@@ -29,7 +28,7 @@ export default function ResidentInfo({ info }) {
         }
     }
 
-    function nextPage(e) {
+    function nextPage(e) {  // esta function permite segun el el valor del boton saber que rango de personajes mostrar, cada ves que haga click en un boton rederiza
         console.log(`hola soy buton numero ${e.target.innerText}`);
         switch (e.target.innerText) {
             case "1": setDataOnly10(info.slice(0, 10))
@@ -60,7 +59,8 @@ export default function ResidentInfo({ info }) {
                 break;
         }
     }
-    function contadorButtons() {
+
+    function contadorButtons() { //ESTA FUNCION MANDA A UN ESTADO LA CANTIDAD DE BOTONES EN HTML
         let html = []
         for (let index = 0; index < contadorBotonestate; index++) {
             html.push(<button className="optionsNextPage" onClick={nextPage} key={index}>{index + 1}</button>)
@@ -68,7 +68,7 @@ export default function ResidentInfo({ info }) {
         setButtons(html)
     }
 
-    useEffect(() => {
+    useEffect(() => {  // REDERIZA EL PRIMER BOTON SEGUN EL RANDOM
         setDataOnly10(info.slice(0, 10))
         if (contadorBotonestate > 0) {
             contadorButtons()
@@ -76,7 +76,7 @@ export default function ResidentInfo({ info }) {
     }, [info, contadorBotonestate])
 
 
-    useEffect(() => {
+    useEffect(() => { // CREA LOS BOTONES DEL PRIMER RENDER
         return () => {
             if (info.length > -1) {
                 botones()
@@ -92,7 +92,7 @@ export default function ResidentInfo({ info }) {
             <div className="ResidenContainer">
                 <div className="buttonsContainer" >
 
-                    {buttons.length > 0 ? buttons.map(button =>
+                    {buttons.length > 0 ? buttons.map(button => //RENDERIZO LOS BOTONES
                         button) : null}
                 </div>
 
@@ -113,12 +113,8 @@ export default function ResidentInfo({ info }) {
                                     <h3 className="h4">{`Status: ${item.status.toUpperCase()}`}</h3>
                                     <h4 className="h4">{`Gender: "${item.gender.toUpperCase()}"`}</h4>
                                     <h4 className="h4">{`Espisodes: ${item.episode.length}`}</h4>
-
-
                                 </div>
-
                             </div>
-
                         )
                     })
                 }
