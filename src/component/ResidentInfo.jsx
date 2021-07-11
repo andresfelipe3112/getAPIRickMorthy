@@ -101,12 +101,12 @@ export default function ResidentInfo({ info }) {
     })
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (contadorBotonestate > 0) {
-            contadorButtons()
-        }
-    }, [contadorBotonestate])
+    //     if (contadorBotonestate > 0) {
+    //         contadorButtons()
+    //     }
+    // }, [contadorBotonestate])
 
 
 
